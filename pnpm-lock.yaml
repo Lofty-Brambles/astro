@@ -422,7 +422,7 @@ importers:
       deepmerge-ts: ^4.2.2
       diff: ^5.1.0
       eol: ^0.9.1
-      es-module-lexer: ^0.10.5
+      es-module-lexer: ^1.1.0
       esbuild: ^0.14.43
       execa: ^6.1.0
       fast-glob: ^3.2.11
@@ -495,7 +495,7 @@ importers:
       debug: 4.3.4
       deepmerge-ts: 4.2.2
       diff: 5.1.0
-      es-module-lexer: 0.10.5
+      es-module-lexer: 1.1.0
       esbuild: 0.14.54
       execa: 6.1.0
       fast-glob: 3.2.12
@@ -1106,6 +1106,9 @@ importers:
     dependencies:
       '@astrojs/node': link:../../../../integrations/node
       astro: link:../../..
+
+  packages/astro/test/benchmark/simple/dist/server:
+    specifiers: {}
 
   packages/astro/test/fixtures/0-css:
     specifiers:
@@ -3837,7 +3840,7 @@ packages:
       '@astro-community/astro-embed-twitter': 0.1.3_astro@packages+astro
       '@astro-community/astro-embed-vimeo': 0.1.1_astro@packages+astro
       '@astro-community/astro-embed-youtube': 0.2.1_astro@packages+astro
-      astro: link:packages\astro
+      astro: link:packages/astro
       unist-util-select: 4.0.1
     dev: false
 
@@ -3847,7 +3850,7 @@ packages:
       astro: ^1.0.0-beta.10
     dependencies:
       '@astro-community/astro-embed-utils': 0.0.3
-      astro: link:packages\astro
+      astro: link:packages/astro
     dev: false
 
   /@astro-community/astro-embed-utils/0.0.3:
@@ -3859,7 +3862,7 @@ packages:
     peerDependencies:
       astro: ^1.0.0-beta.10
     dependencies:
-      astro: link:packages\astro
+      astro: link:packages/astro
       lite-vimeo-embed: 0.1.0
     dev: false
 
@@ -3868,7 +3871,7 @@ packages:
     peerDependencies:
       astro: ^1.0.0-beta.10
     dependencies:
-      astro: link:packages\astro
+      astro: link:packages/astro
       lite-youtube-embed: 0.2.0
     dev: false
 
@@ -10600,7 +10603,7 @@ packages:
       '@astro-community/astro-embed-twitter': 0.1.3_astro@packages+astro
       '@astro-community/astro-embed-vimeo': 0.1.1_astro@packages+astro
       '@astro-community/astro-embed-youtube': 0.2.1_astro@packages+astro
-      astro: link:packages\astro
+      astro: link:packages/astro
     dev: false
 
   /async-sema/3.1.1:
@@ -11742,6 +11745,10 @@ packages:
 
   /es-module-lexer/0.10.5:
     resolution: {integrity: sha512-+7IwY/kiGAacQfY+YBhKMvEmyAJnw5grTUgjG85Pe7vcUI/6b7pZjZG8nQ7+48YhzEAEqrEgD2dCz/JIK+AYvw==}
+    dev: false
+
+  /es-module-lexer/1.1.0:
+    resolution: {integrity: sha512-fJg+1tiyEeS8figV+fPcPpm8WqJEflG3yPU0NOm5xMvrNkuiy7HzX/Ljng4Y0hAoiw4/3hQTCFYw+ub8+a2pRA==}
     dev: false
 
   /es-shim-unscopables/1.0.0:
