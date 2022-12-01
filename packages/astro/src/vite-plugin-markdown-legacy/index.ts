@@ -218,6 +218,7 @@ ${setup}`.trim();
 					viteConfig: resolvedConfig,
 					filename,
 					source: astroResult,
+					id,
 				};
 
 				let transformResult = await cachedCompilation(compileProps);
@@ -244,6 +245,7 @@ ${tsResult}`;
 					clientOnlyComponents: transformResult.clientOnlyComponents,
 					hydratedComponents: transformResult.hydratedComponents,
 					scripts: transformResult.scripts,
+					headInjection: 'none'
 				};
 
 				return {
