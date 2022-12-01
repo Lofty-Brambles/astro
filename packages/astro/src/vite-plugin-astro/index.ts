@@ -14,6 +14,8 @@ import { viteID } from '../core/util.js';
 import { getFileInfo } from '../vite-plugin-utils/index.js';
 import { handleHotUpdate } from './hmr.js';
 import { parseAstroRequest, ParsedRequestResult } from './query.js';
+export type { AstroPluginMetadata };
+export { getAstroMetadata } from './metadata.js';
 
 const FRONTMATTER_PARSE_REGEXP = /^\-\-\-(.*)^\-\-\-/ms;
 interface AstroPluginOptions {
@@ -116,6 +118,7 @@ export default function astro({ settings, logging }: AstroPluginOptions): vite.P
 				astroConfig: config,
 				viteConfig: resolvedConfig,
 				filename,
+				id,
 				source,
 			};
 
@@ -211,6 +214,7 @@ export default function astro({ settings, logging }: AstroPluginOptions): vite.P
 				astroConfig: config,
 				viteConfig: resolvedConfig,
 				filename,
+				id,
 				source,
 			};
 
@@ -254,6 +258,7 @@ export default function astro({ settings, logging }: AstroPluginOptions): vite.P
 					clientOnlyComponents: transformResult.clientOnlyComponents,
 					hydratedComponents: transformResult.hydratedComponents,
 					scripts: transformResult.scripts,
+					headInjection: 'none',
 				};
 
 				return {
@@ -333,6 +338,7 @@ ${source}
 				astroConfig: config,
 				viteConfig: resolvedConfig,
 				filename: context.file,
+				id: context.modules[0]?.id ?? undefined,
 				source: await context.read(),
 			};
 			const compile = () => cachedCompilation(compileProps);

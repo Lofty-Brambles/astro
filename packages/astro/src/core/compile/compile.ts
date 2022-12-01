@@ -21,6 +21,7 @@ export interface CompileProps {
 	astroConfig: AstroConfig;
 	viteConfig: ResolvedConfig;
 	filename: string;
+	id: string | undefined;
 	source: string;
 }
 
@@ -28,6 +29,7 @@ async function compile({
 	astroConfig,
 	viteConfig,
 	filename,
+	id: moduleId,
 	source,
 }: CompileProps): Promise<CompileResult> {
 	let cssDeps = new Set<string>();
@@ -42,6 +44,7 @@ async function compile({
 		site: astroConfig.site?.toString(),
 		sourcefile: filename,
 		sourcemap: 'both',
+		moduleId,
 		internalURL: `/@fs${prependForwardSlash(
 			viteID(new URL('../../runtime/server/index.js', import.meta.url))
 		)}`,
