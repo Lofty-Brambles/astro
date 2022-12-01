@@ -245,7 +245,7 @@ ${tsResult}`;
 					clientOnlyComponents: transformResult.clientOnlyComponents,
 					hydratedComponents: transformResult.hydratedComponents,
 					scripts: transformResult.scripts,
-					headInjection: 'none'
+					propagation: 'none'
 				};
 
 				return {
