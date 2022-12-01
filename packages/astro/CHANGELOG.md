@@ -1,5 +1,11 @@
 # astro
 
+## 1.6.13
+
+### Patch Changes
+
+- [#5501](https://github.com/withastro/astro/pull/5501) [`3c44033e4`](https://github.com/withastro/astro/commit/3c44033e4ebafd28472d5c6a43e55c0363c6b555) Thanks [@Princesseuh](https://github.com/Princesseuh)! - Added a warning in build when trying to hydrate an Astro component
+
 ## 1.6.12
 
 ### Patch Changes
